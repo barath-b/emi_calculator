@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cont">
+        <h1>Loan Caluclator</h1>
+        <div class="input">
+            <h2>Loan Amount</h2>
+            <input type="text" name="Amount" id="amt-f" value="1000000" min="100000" max="100000000" step="50000">
+            <div class="prog">
+                <div id="amt-bg" class="progress">
+                    <input type="range" name="Amount" id="amt-s" class="slider" value="1000000" min="100000"
+                        max="100000000" step="50000">
+                </div>
+            </div>
+        </div>
+        <div class="input">
+            <h2>Tenure (Years)</h2>
+            <input type="number" name="Tenure" id="yrs-f" value="1" min="1" max="30" step="1">
+            <div class="prog">
+                <div id="yrs-bg" class="progress">
+                    <input type="range" name="Tenure" id="yrs-s" class="slider" value="1" min="1" max="30" step="1">
+                </div>
+            </div>
+        </div>
+        <div class="input">
+            <h2>Interest Rate (%P.A.)</h2>
+            <input type="text" name="Interest" id="ir-f" value="5" min="5" max="20" step="0.25">
+            <div class="prog">
+                <div id="ir-bg" class="progress">
+                    <input type="range" name="Interest" id="ir-s" class="slider" value="5" min="5" max="20" step="0.01">
+                </div>
+            </div>
+        </div>
+        <div class="result flex">
+            <div>
+                <p>Loan Amount</p>
+                <p id="prin"></p>
+            </div>
+            <div>
+                <p>Monthly EMI</p>
+                <p id="emi"></p>
+            </div>
+            <div>
+                <p>Interest</p>
+                <p id="int"></p>
+            </div>
+            <div>
+                <p>Total Amount</p>
+                <p id="tot"></p>
+            </div>
+        </div>
+        <div class="breakup">
+            <h2>Starting Month</h2>
+            <input type="month" name="month" id="month" value="2019-07" min="1980-01">
+            <input type="button" id="monthBtn" value="Calculate">
+            <p class="error"></p>
+            <div class="container">
+                <div class="flex header">
+                    <div>
+                        <p>Year</p>
+                    </div>
+                    <div>
+                        <p>Principal</p>
+                    </div>
+                    <div>
+                        <p>Interest</p>
+                    </div>
+                    <div>
+                        <p>EMI</p>
+                    </div>
+                    <div>
+                        <p>Balance Principal</p>
+                    </div>
+                    <div>
+                        <p>Balance Payment</p>
+                    </div>
+                    <div>
+                        <p>Loan Paid</p>
+                    </div>
+                </div>
+                <div class="list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
